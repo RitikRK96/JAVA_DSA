@@ -27,13 +27,13 @@ We usually care about the **Worst Case Scenario** (Upper Bound).
 Imagine `n` is the input size (e.g., number of elements in an array).
 
 | Notation          | Name               | Speed        | Example                        | Visualization            |
-| :---------------- | :----------------- | :----------- | :----------------------------- | :----------------------- | ------------- |
+| :---------------- | :----------------- | :----------- | :----------------------------- | :----------------------- |
 | **$O(1)$**        | Constant           | ⚡ Fastest   | Accessing array index `arr[5]` | `______` (Flat line)     |
 | **$O(\log n)$**   | Logarithmic        | 🚄 Very Fast | Binary Search                  | `-----.` (Slowly rising) |
 | **$O(n)$**        | Linear             | 🏃 Fast      | Simple For Loop                | `/` (Straight diagonal)  |
 | **$O(n \log n)$** | Linear Logarithmic | 🚶 Decent    | Sorting (Merge Sort)           | `_/` (Steep diagonal)    |
 | **$O(n^2)$**      | Quadratic          | 🐢 Slow      | Nested Loops (Bubble Sort)     | `J` (Curve up)           |
-| **$O(2^n)$**      | Exponential        | 🐌 Very Slow | Recursion (Fibonacci)          | `                        | ` (Rocket up) |
+| **$O(2^n)$**      | Exponential        | 🐌 Very Slow | Recursion (Fibonacci)          | `\|` (Rocket up)         |
 
 ---
 
