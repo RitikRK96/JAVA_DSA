@@ -1,5 +1,12 @@
 # Functions and Methods in Java
 
+## 📂 Files Overview
+
+- **`Functions.java`**: Introduction to basic function syntax and usage.
+- **`Add.java`**: A method to add two numbers with parameters and return type.
+- **`Multiply.java`**: A method demonstrating multiplication of numbers.
+- **`FactorialRecursive.java`**: An example of recursion (a function calling itself) to calculate factorial.
+
 ## Introduction
 
 In programming, functions are blocks of code that perform a specific task. They help in reducing code redundancy and improving modularity. In Java, functions are known as **Methods** because they are always associated with a class or an object.
