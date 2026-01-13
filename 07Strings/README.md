@@ -51,13 +51,60 @@ String s3 = new String("Tony");
 - new "Tony" created in Heap (outside pool).
 - `s1 == s3` is `false`.
 
-### 3. Cheat Sheet: Common Methods
+### 3. Cheat Sheet: Ultimate String Methods List 📜
 
-| Method            | Description                              | Example                             |
-| :---------------- | :--------------------------------------- | :---------------------------------- |
-| `length()`        | Returns count of chars                   | `"Hi".length()` -> `2`              |
-| `charAt(i)`       | Returns char at index                    | `"Hi".charAt(0)` -> `'H'`           |
-| `substring(i, j)` | Returns part of string from `i` to `j-1` | `"Hello".substring(0,2)` -> `"He"`  |
-| `contains(s)`     | Checks if `s` is present                 | `"Hello".contains("ell")` -> `true` |
-| `equals(s)`       | Compares **content**                     | `s1.equals(s2)`                     |
-| `trim()`          | Removes start/end spaces                 | `"  Hi  ".trim()` -> `"Hi"`         |
+Here are the **30+ most important methods** you need for Interviews and Development.
+
+#### 🔍 Inspection & Access
+
+| Method          | Description                                     | Example                   |
+| :-------------- | :---------------------------------------------- | :------------------------ |
+| `length()`      | Returns number of characters                    | `"Hello".length()` → `5`  |
+| `charAt(int i)` | Returns char at index                           | `"ABC".charAt(1)` → `'B'` |
+| `isEmpty()`     | Checks if length is 0                           | `"".isEmpty()` → `true`   |
+| `isBlank()`     | Checks if empty or whitespace only (_Java 11+_) | `"  ".isBlank()` → `true` |
+
+#### ⚖️ Comparison
+
+| Method                          | Description                           | Example                                |
+| :------------------------------ | :------------------------------------ | :------------------------------------- |
+| `equals(Object o)`              | Compares **content** (case-sensitive) | `"Hi".equals("hi")` → `false`          |
+| `equalsIgnoreCase(String s)`    | Compares **content** (ignores case)   | `"Hi".equalsIgnoreCase("hi")` → `true` |
+| `compareTo(String s)`           | Lexicographical comparison            | `"A".compareTo("B")` → `-1`            |
+| `compareToIgnoreCase(String s)` | Lexicographical (ignores case)        | `"a".compareToIgnoreCase("A")` → `0`   |
+| `startsWith(String s)`          | Checks if starts with prefix          | `"Hello".startsWith("He")` → `true`    |
+| `endsWith(String s)`            | Checks if ends with suffix            | `"Hello".endsWith("lo")` → `true`      |
+| `contains(CharSequence s)`      | Checks if sequence is present         | `"Java".contains("av")` → `true`       |
+
+#### 🔎 Searching
+
+| Method                        | Description                      | Example                          |
+| :---------------------------- | :------------------------------- | :------------------------------- |
+| `indexOf(String s)`           | Returns first index of substring | `"Hello".indexOf("l")` → `2`     |
+| `lastIndexOf(String s)`       | Returns last index of substring  | `"Hello".lastIndexOf("l")` → `3` |
+| `indexOf(String s, int from)` | Search starting from index       | `"Hello".indexOf("l", 3)` → `3`  |
+
+#### ✏️ Modification (Returns New String)
+
+| Method                                    | Description                         | Example                                               |
+| :---------------------------------------- | :---------------------------------- | :---------------------------------------------------- |
+| `substring(int begin)`                    | Returns suffix from index           | `"Hello".substring(2)` → `"llo"`                      |
+| `substring(int begin, int end)`           | Returns substring `[begin, end)`    | `"Hello".substring(0, 2)` → `"He"`                    |
+| `concat(String s)`                        | Appends to end (Use `+` instead)    | `"Hi".concat("!")` → `"Hi!"`                          |
+| `replace(char old, char new)`             | Replaces all char occurrences       | `"aba".replace('a', 'o')` → `"obo"`                   |
+| `replace(CharSequence t, CharSequence r)` | Replaces all substring occurrences  | `"Hi World".replace("Hi", "Hello")` → `"Hello World"` |
+| `replaceAll(String regex, String r)`      | Replaces via Regex                  | `"a1b2".replaceAll("\\d", "#")` → `"a#b#"`            |
+| `toLowerCase()`                           | Converts to lowercase               | `"HI".toLowerCase()` → `"hi"`                         |
+| `toUpperCase()`                           | Converts to uppercase               | `"hi".toUpperCase()` → `"HI"`                         |
+| `trim()`                                  | Removes leading/trailing spaces     | `"  Hi  ".trim()` → `"Hi"`                            |
+| `strip()`                                 | Unicode-aware trim (_Java 11+_)     | `"\u2005Hi ".strip()` → `"Hi"`                        |
+| `repeat(int count)`                       | Repeats string n times (_Java 11+_) | `"Hi".repeat(2)` → `"HiHi"`                           |
+
+#### 🔄 Conversion
+
+| Method                  | Description                    | Example                            |
+| :---------------------- | :----------------------------- | :--------------------------------- |
+| `toCharArray()`         | Converts to char array         | `"Hi".toCharArray()` → `['H','i']` |
+| `split(String regex)`   | Splits into array by delimiter | `"A,B".split(",")` → `["A", "B"]`  |
+| `String.valueOf(int i)` | Static: Converts int to String | `String.valueOf(10)` → `"10"`      |
+| `getBytes()`            | Encodes string to byte array   | `"Hi".getBytes()` → `[72, 105]`    |
